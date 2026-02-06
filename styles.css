@@ -1,0 +1,812 @@
+/* ============================================
+   포트폴리오 웹사이트 스타일시트
+   이 파일을 수정하여 디자인을 커스터마이징하세요
+   ============================================ */
+
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ============================================
+   네비게이션
+   ============================================ */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-logo:hover {
+    color: #999;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #999;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fff;
+}
+
+/* ============================================
+   배경 그라데이션
+   ============================================ */
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.gradient-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   홈 페이지
+   ============================================ */
+.home-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.home-content {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.hero-section {
+    text-align: center;
+    position: relative;
+}
+
+.hero-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 6rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, #fff 0%, #999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    color: #999;
+    margin-bottom: 4rem;
+}
+
+.hero-headline {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.headline-text {
+    color: #ccc;
+}
+
+.headline-text-highlight {
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+/* 글래스 커서 효과 */
+.glass-cursor {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.glass-cursor.active {
+    opacity: 1;
+}
+
+.glass-cursor-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.glass-cursor-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    filter: blur(30px);
+    border-radius: 50%;
+}
+
+.glass-cursor-circle {
+    position: absolute;
+    inset: 24px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.35);
+}
+
+.glass-cursor-highlight {
+    position: absolute;
+    inset: 40px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+    border-radius: 50%;
+}
+
+.glass-cursor-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-cursor-shimmer {
+    position: absolute;
+    inset: 32px;
+    background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+    border-radius: 50%;
+    opacity: 0.6;
+    transform: rotate(45deg);
+}
+
+.hero-timeline {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   프로필 페이지
+   ============================================ */
+.profile-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 3rem 80px;
+}
+
+.profile-content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.profile-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, #999 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+/* 프로필 왼쪽 컬럼 */
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-image-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.contact-item {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.contact-label {
+    font-size: 0.875rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.contact-value {
+    font-size: 1.25rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.contact-separator {
+    color: #999;
+}
+
+.contact-link {
+    font-size: 1.125rem;
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #666;
+    transition: all 0.3s;
+}
+
+.contact-link:hover {
+    color: #ccc;
+    text-decoration-color: #fff;
+}
+
+/* 프로필 오른쪽 컬럼 */
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s;
+}
+
+.info-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.info-card-full {
+    grid-column: 1 / -1;
+}
+
+.info-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, #999 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+}
+
+.info-content {
+    font-size: 1.125rem;
+    color: #ccc;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 프로젝트 개요 카드 */
+.projects-overview-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects-overview-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, #999 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+}
+
+.projects-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.project-category {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-category-badge {
+    border: 1px solid #666;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    transition: border-color 0.3s;
+}
+
+.project-category-badge:hover {
+    border-color: #fff;
+}
+
+.project-category-badge p {
+    font-size: 1.125rem;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.project-category-content {
+    color: #ccc;
+}
+
+.project-category-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.project-category-period {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-category-desc {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ============================================
+   프로젝트 리스트 페이지
+   ============================================ */
+.projects-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 3rem 80px;
+}
+
+.projects-content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, #999 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-title-text {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.project-period {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   프로젝트 상세 페이지
+   ============================================ */
+.project-detail-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 3rem 80px;
+}
+
+.project-detail-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 2rem;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
+}
+
+.project-header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 3rem;
+}
+
+.project-detail-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, #999 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.project-detail-period {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-detail-description {
+    font-size: 1.25rem;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.project-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.project-meta-item h3 {
+    font-size: 0.875rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.project-meta-item p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.project-actions {
+    display: flex;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-action-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.project-action-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.project-section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(135deg, #999 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+.section-content {
+    font-size: 1.125rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-detail-image {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   반응형 디자인
+   ============================================ */
+@media (max-width: 1024px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-headline {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .home-content,
+    .profile-content,
+    .projects-content,
+    .project-detail-content {
+        padding: 0 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-headline {
+        font-size: 1.5rem;
+    }
+
+    .profile-title,
+    .projects-title {
+        font-size: 2.5rem;
+    }
+}

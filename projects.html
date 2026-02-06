@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Park Lee Eun</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Gradient -->
+    <div class="gradient-background">
+        <svg class="gradient-svg" fill="none" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">
+            <defs>
+                <linearGradient id="paint0_linear" x1="1920" x2="0" y1="0" y2="1080">
+                    <stop offset="0%" stop-color="#000000" />
+                    <stop offset="40%" stop-color="#1a1a1a" />
+                    <stop offset="70%" stop-color="#2a0a0a" />
+                    <stop offset="100%" stop-color="#3d1010" />
+                </linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#paint0_linear)" />
+        </svg>
+    </div>
+
+    <!-- Main Content -->
+    <main class="projects-container">
+        <div class="projects-content">
+            <h1 class="projects-title">Projects</h1>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1: STOOV -->
+                <article class="project-card" onclick="location.href='project-stoov.html'">
+                    <div class="project-image-wrapper">
+                        <img src="images/stoov-thumbnail.jpg" alt="STOOV" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title-text">STOOV</h3>
+                        <p class="project-period">2025.10 ~ 2026.01</p>
+                        <p class="project-description">버스킹 공연 장소를 탐색하고, 예약 사이트로 바로 이동이 가능한 지도형 플랫폼</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Service Design</span>
+                            <span class="project-tag">Map Platform</span>
+                            <span class="project-tag">Busking</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: 메쎄이상 -->
+                <article class="project-card" onclick="location.href='project-messeisang.html'">
+                    <div class="project-image-wrapper">
+                        <img src="images/messeisang-thumbnail.jpg" alt="메쎄이상 메인 홈 개선" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title-text">메쎄이상 메인 홈 개선</h3>
+                        <p class="project-period">2026.01 ~ 02</p>
+                        <p class="project-description">회사를 설명하는 공간에서 방문자의 전시 정보를 찾는 출발점으로 개선</p>
+                        <div class="project-tags">
+                            <span class="project-tag">UX Renewal</span>
+                            <span class="project-tag">Information Architecture</span>
+                            <span class="project-tag">Exhibition</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: LocalLink -->
+                <article class="project-card" onclick="location.href='project-locallink.html'">
+                    <div class="project-image-wrapper">
+                        <img src="images/locallink-thumbnail.jpg" alt="LocalLink" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title-text">LocalLink</h3>
+                        <p class="project-period">2025.03 ~ 11</p>
+                        <p class="project-description">소외 지역 활성화를 위한 현지인의 여행 코스 제공과 게스트의 코스 소비 서비스</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Travel</span>
+                            <span class="project-tag">Local Tourism</span>
+                            <span class="project-tag">Community Platform</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
