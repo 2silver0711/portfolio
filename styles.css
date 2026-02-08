@@ -16,6 +16,7 @@ body {
     color: #fff;
     overflow-x: hidden;
     min-height: 100vh;
+    padding-top: 80px; /* ⭐ 이 줄만 추가 */
 }
 
 /* ============================================
