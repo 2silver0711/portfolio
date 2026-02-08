@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Park Lee Eun</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profile.html" class="nav-link active">Profile</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Gradient -->
+    <div class="gradient-background">
+        <svg class="gradient-svg" fill="none" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">
+            <defs>
+                <linearGradient id="paint0_linear" x1="1920" x2="0" y1="0" y2="1080">
+                    <stop offset="0%" stop-color="#000000" />
+                    <stop offset="40%" stop-color="#1a1a1a" />
+                    <stop offset="70%" stop-color="#2a0a0a" />
+                    <stop offset="100%" stop-color="#3d1010" />
+                </linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#paint0_linear)" />
+        </svg>
+    </div>
+
+    <!-- Main Content -->
+    <main class="profile-container">
+        <div class="profile-content">
+            <h1 class="profile-title">Profile</h1>
+
+            <div class="profile-grid">
+                <!-- Left Column - Profile Image & Contact -->
+                <div class="profile-left">
+                    <!-- Profile Image -->
+                    <div class="profile-image-card">
+                        <img src="images/profile.jpg" alt="Park Lee Eun" class="profile-image">
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <p class="contact-label">Name</p>
+                            <p class="contact-value">박이은 <span class="contact-separator">/</span> Park Lee Eun</p>
+                        </div>
+                        <div class="contact-item">
+                            <p class="contact-label">Email</p>
+                            <a href="mailto:peu11118@naver.com" class="contact-link">peu11118@naver.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <p class="contact-label">Phone</p>
+                            <p class="contact-value">010-4533-1620</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="profile-right">
+                    <!-- Education & Awards -->
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h2 class="info-title">Education.</h2>
+                            <div class="info-content">
+                                <p>2025 / 서울여자대학교<br>산업디자인학과 학사 졸업</p>
+                                <p>2025 / 주)구름 프로덕트 디자이너<br>4회차 부트캠프 수료</p>
+                                <p>2021 / 조선대학교<br>디자인공학과 수료</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h2 class="info-title">Award Details.</h2>
+                            <div class="info-content">
+                                <p>2025 / kakao goorm DEEPDIVE<br>4회차 팀 최우수상</p>
+                                <p>2024 / LocalLink 프로젝트<br>노트폴리오 PICK 선정</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience & Activities -->
+                    <div class="info-card info-card-full">
+                        <h2 class="info-title">Experience + Activities.</h2>
+                        <div class="info-content">
+                            <p>2024 / 산업디자인학과 졸준위 포스터 팀장</p>
+                            <p>2024 / SKT 에이닷 얼리어닷터 2기</p>
+                        </div>
+                    </div>
+
+                    <!-- Projects Overview -->
+                    <div class="projects-overview-card">
+                        <h2 class="projects-overview-title">Project.</h2>
+                        <div class="projects-overview-grid">
+                            <!-- Service Project -->
+                            <div class="project-category">
+                                <div class="project-category-badge">
+                                    <p>Service Project</p>
+                                </div>
+                                <div class="project-category-content">
+                                    <p class="project-category-name">STOOV</p>
+                                    <p class="project-category-period">(2025.10 ~ 2026.01)</p>
+                                    <p class="project-category-desc">버스킹 공연 장소를 탐색하고, 예약 사이트로 바로 이동이 가능한 지도형 플랫폼</p>
+                                </div>
+                            </div>
+
+                            <!-- UX/UI Renewal -->
+                            <div class="project-category">
+                                <div class="project-category-badge">
+                                    <p>UX/UI Renewal</p>
+                                </div>
+                                <div class="project-category-content">
+                                    <p class="project-category-name">메쎄이상 메인 홈 개선</p>
+                                    <p class="project-category-period">(2026.01 ~ 02)</p>
+                                    <p class="project-category-desc">회사를 설명하는 공간에서 방문자의 전시 정보를 찾는 출발점으로 개선</p>
+                                </div>
+                            </div>
+
+                            <!-- UX/UI Design -->
+                            <div class="project-category">
+                                <div class="project-category-badge">
+                                    <p>UX/UI Design</p>
+                                </div>
+                                <div class="project-category-content">
+                                    <p class="project-category-name">LocalLink</p>
+                                    <p class="project-category-period">(2025.03 ~ 11)</p>
+                                    <p class="project-category-desc">소외 지역 활성화를 위한 현지인의 여행 코스 제공과 게스트의 코스 소비 서비스</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
