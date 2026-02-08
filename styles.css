@@ -106,7 +106,7 @@ body {
 .home-container {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px); /* ⭐ 핵심 */
     display: flex;
     align-items: center;
     justify-content: center;
