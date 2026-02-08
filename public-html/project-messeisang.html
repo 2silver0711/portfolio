@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메쎄이상 메인 홈 개선 - Park Lee Eun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Gradient -->
+    <div class="gradient-background">
+        <svg class="gradient-svg" fill="none" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">
+            <defs>
+                <linearGradient id="paint0_linear" x1="1920" x2="0" y1="0" y2="1080">
+                    <stop offset="0%" stop-color="#000000" />
+                    <stop offset="40%" stop-color="#1a1a1a" />
+                    <stop offset="70%" stop-color="#2a0a0a" />
+                    <stop offset="100%" stop-color="#3d1010" />
+                </linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#paint0_linear)" />
+        </svg>
+    </div>
+
+    <!-- Main Content -->
+    <main class="project-detail-container">
+        <div class="project-detail-content">
+            <!-- Back Button -->
+            <button class="back-button" onclick="location.href='projects.html'">
+                ← Back to Projects
+            </button>
+
+            <!-- Project Header -->
+            <header class="project-header">
+                <h1 class="project-detail-title">메쎄이상 메인 홈 개선</h1>
+                <p class="project-detail-period">2026.01 ~ 02</p>
+                <p class="project-detail-description">회사를 설명하는 공간에서 방문자의 전시 정보를 찾는 출발점으로 개선</p>
+                
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <h3>Role</h3>
+                        <p>100% / UX 리서치 및 기획 전반, 디자인 작업, 가설 및 KPI 설정</p>
+                    </div>
+                    <div class="project-meta-item">
+                        <h3>Tools</h3>
+                        <p>Figma, Make, ChatGPT, Perplexity, Claude</p>
+                    </div>
+                    <div class="project-meta-item">
+                        <h3>Tags</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">UX Renewal</span>
+                            <span class="project-tag">개인 프로젝트 (Web design)</span>
+                            <span class="project-tag">Information Architecture</span>
+                            <span class="project-tag">Exhibition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="project-actions">
+                    <a href="https://www.figma.com/proto/pGmGfdjDDZI7KlCVj0TJD1/%EB%A9%94%EC%8E%84%EC%9D%B4%EC%83%81-%ED%99%88-%EB%A6%AC%EB%89%B4%EC%96%BC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=1-501&t=tQV0QgIni4v6w3Am-1" target="_blank" class="project-action-btn">프로토타입 보기</a>
+                </div>
+            </header>
+
+            <!-- Project Sections -->
+            <section class="project-section">
+                <h2 class="section-title">Overview</h2>
+                <p class="section-content">이 과제에서는 메쎄이상 메인 홈을 '회사를 설명하는 페이지'가 아니라 '방문자가 전시 정보를 찾기 시작하는 출발점'으로 리뉴얼하는 것을 목표로 했습니다. 핵심은 단순한 UI 개선이 아니라, 사용자가 수행하려는 태스크를 페이지의 중심에 두는 구조적 전환입니다.</p>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title">Problem</h2>
+                <p class="section-content">메쎄이상은 국내 1위 전시 주최사로 연간 다수의 전시를 운영하고 있지만, 현재 메인 홈은 기업 규모와 성과를 설명하는 브랜딩 페이지에 가까운 구조입니다. 반면 실제 방문자의 다수는 관람객과 참가사로, '전시 일정, 참여 방법, 사전 등록' 같은 전시 액션 정보를 찾기 위해 유입됩니다. 즉, 회사가 보여주고 싶은 메시지와 사용자가 수행하려는 태스크가 메인에서 충돌하고 있었고, 이 불일치가 초기 탐색 흐름을 지연시키는 핵심 원인이라고 판단했습니다.</p>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title">Solution</h2>
+                <p class="section-content">홈 진입 시 방문자의 '전시 탐색 시작자'로서의 인지 시간을 단축하기 위해, 전시 중심 전시 정보와 회사 정보의 재배치를 설계했습니다. 핵심 솔루션은 다음과 같습니다.<br><br>
+
+                <strong>1. 전시 관람/참가 버튼 - 전시 탐색 CTA 정의</strong><br>
+                전시 탐색의 공식적인 시작점을 기존 하단 배너가 아닌 상단 Hero 영역 내 '전시 관람 버튼'과 '참가/참관 버튼'으로 전환하여, 가장 먼저 안내하도록 변경했습니다.<br><br>
+
+                <strong>2. 전시 입장 위치 버튼 재정의</strong><br>
+                전체 전시 정보를 확인할 수 있는 '전체 행사일정'을 확인하고 입력한 탐색 흐름의 시작점으로 정의하여 전시 탐색 흐름의 정보 계층을 통합했습니다.<br><br>
+
+                <strong>3. 전시 리스트 슬라이드</strong><br>
+                호버링 시 '전시 제목/날짜/장소'를 바로 인지할 수 있도록 함으로써 메인에서부터 전시 정보를 즉시 확인할 수 있게 했습니다.</p>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title">Result</h2>
+                <p class="section-content">Maze를 활용한 UT를 진행했습니다 (N=6, 관람 목적 4명/참가 목적 2명, 메인 홈 기준 태스크 수행). UT 결과, Hero 영역에서 전시 탐색을 시작하기까지 걸리는 시간이 약 6~7초에서 3초 이내로 단축되었고, 전시 탐색 CTA 클릭률은 62%에서 83%로 완만하지만 유의미한 수준으로 증가했습니다.<br><br>
+
+                중요한 건 수치 자체보다, 사용자가 더 빠르게 '행동을 시작한다'는 변화입니다. 메인은 모든 사용자가 반드시 거치는 핵심 시작점이고, 홈 체제를 다루거나 사용자 행동을 가장 크게 변화시킬 수 있는 지점입니다. '회사를 보여주는 공간'이 아닌 '사용자의 행동을 도와주는 시작점'이라는 가설을 세우고, 그에 맞는 구조를 개선했습니다.</p>
+            </section>
+
+            <!-- Project Images -->
+            <section class="project-images">
+                <img src="images/messeisang-thumbnail.jpg" alt="메쎄이상 이미지 1" class="project-detail-image">
+                <img src="images/messeisang-image-2.jpg" alt="메쎄이상 이미지 2" class="project-detail-image">
+                <img src="images/messeisang-image-3.jpg" alt="메쎄이상 이미지 3" class="project-detail-image">
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

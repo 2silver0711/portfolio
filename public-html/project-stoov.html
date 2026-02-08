@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOOV - Park Lee Eun</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Gradient -->
+    <div class="gradient-background">
+        <svg class="gradient-svg" fill="none" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">
+            <defs>
+                <linearGradient id="paint0_linear" x1="1920" x2="0" y1="0" y2="1080">
+                    <stop offset="0%" stop-color="#000000" />
+                    <stop offset="40%" stop-color="#1a1a1a" />
+                    <stop offset="70%" stop-color="#2a0a0a" />
+                    <stop offset="100%" stop-color="#3d1010" />
+                </linearGradient>
+            </defs>
+            <rect width="1920" height="1080" fill="url(#paint0_linear)" />
+        </svg>
+    </div>
+
+    <!-- Main Content -->
+    <main class="project-detail-container">
+        <div class="project-detail-content">
+            <!-- Back Button -->
+            <button class="back-button" onclick="location.href='projects.html'">
+                ← Back to Projects
+            </button>
+
+            <!-- Project Header -->
+            <header class="project-header">
+                <h1 class="project-detail-title">STOOV</h1>
+                <p class="project-detail-period">2025.10 ~ 2026.01</p>
+                <p class="project-detail-description">버스킹 공연 장소를 탐색하고, 예약 사이트로 바로 이동이 가능한 지도형 플랫폼</p>
+                
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <h3>Role</h3>
+                        <p>70% / UX 리서치 및 구조 설계, IA·플로우 차트 작성, UI 디자인 및 컴포넌트 제작, 디자인 시스템 구축, 디자인 QA 관리, UT 기획</p>
+                    </div>
+                    <div class="project-meta-item">
+                        <h3>Tools</h3>
+                        <p>Figma, Ps, Ai, Notion, Excel, Perplexity, ChatGPT, Maze, Krea.ai</p>
+                    </div>
+                    <div class="project-meta-item">
+                        <h3>Tags</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Service Design</span>
+                            <span class="project-tag">Map Platform</span>
+                            <span class="project-tag">Busking</span>
+                            <span class="project-tag">모바일 웹</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="project-actions">
+                    <a href="https://www.figma.com/design/LpVuBa7LizDnO3FiEraXcP/%F0%9F%8E%B8-STOOV-Design-System-Library?node-id=0-1&t=6J9JS1WHDbFsu5nL-1" target="_blank" class="project-action-btn">디자인 시스템 보기</a>
+                    <a href="https://www.figma.com/proto/HciHfbMaqayfYbIFdPJVOa/STOOV-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?node-id=79-4327&t=ykIDW28rKHXH0Asq-1" target="_blank" class="project-action-btn">프로토타입 보기</a>
+                </div>
+            </header>
+
+            <!-- Project Sections -->
+            <section class="project-section">
+                <h2 class="section-title">Overview</h2>
+                <p class="section-content">STOOV는 지도 기반으로 버스킹 공연 장소를 탐색하고, 운영시간·위치·예약 조건 등 상세 정보를 한곳에서 확인하며, 예약 사이트로 바로 이동할 수 있는 통합 플랫폼입니다.</p>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title">Problem</h2>
+                <p class="section-content">버스킹 아티스트들은 공연 장소 정보가 파편화되어 있어 운영 시간, 위치 조건, 예약 필요 여부를 각각 다른 곳에서 확인해야 했습니다. 장소 탐색부터 예약까지 비체계적이고 비효율적인 과정으로 인해 시간이 많이 소요되었습니다.</p>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title">Solution</h2>
+                <p class="section-content">지도 중심의 직관적인 UI로 장소를 한눈에 파악하고, 마커 클릭 시 버텀시트 팝업으로 상세 정보를 제공합니다. 운영 시간부터 위치 조건, 예약 필요 정보를 한 흐름으로 빠르게 확인할 수 있도록 설계했으며, 연락처와 지도 위치를 통해 실제 예약까지 원활하게 진행할 수 있습니다.</p>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title">Result</h2>
+                <p class="section-content">Usability Test를 통해 장소 탐색부터 선택, 예약 과정의 가설을 검증했습니다. 100% "기존 방식보다 탐색이 쉽다" 응답, 75% "꼭 사용해보고 싶다" 응답, 83% "비체계적 장소 탐색" 경험을 확인했습니다. 사용자들은 공연 장소 정보의 통합 자체를 큰 가치로 인식하며, UT 결과 기존의 파편화된 장소 탐색 및 예약 경험을 대체할 수 있는 인식 개선을 확인했습니다.</p>
+            </section>
+
+            <!-- Project Images -->
+            <section class="project-images">
+                <img src="images/stoov-thumbnail.jpg" alt="STOOV 이미지 1" class="project-detail-image">
+                <img src="images/stoov-image-2.jpg" alt="STOOV 이미지 2" class="project-detail-image">
+                <img src="images/stoov-image-3.jpg" alt="STOOV 이미지 3" class="project-detail-image">
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
